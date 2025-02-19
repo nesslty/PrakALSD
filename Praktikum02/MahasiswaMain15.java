@@ -18,5 +18,8 @@ public class MahasiswaMain15 {
         mhs2.updateIpk(3.30);
         mhs2.tampilkanInformasi();
 
+        Mahasiswa15 mhsNety = new Mahasiswa15("Nety Sulistyorini", "244107060042", 3.77, "SIB 1D");
+        mhsNety.updateIpk(3.88);
+        mhsNety.tampilkanInformasi();
     }
 }
