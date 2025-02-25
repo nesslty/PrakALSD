@@ -25,7 +25,6 @@ public class MatakuliahDemo15 {
             dummy = sc.nextLine();
             jumlahJam = Integer.parseInt(dummy);
 
-
             arrayMataKuliah15[i] = new MataKuliah15(kode, nama, sks, jumlahJam);
         }
         System.out.println("_________________________________________________________________________________");
