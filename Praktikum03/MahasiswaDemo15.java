@@ -25,23 +25,22 @@ public class MahasiswaDemo15 {
             dummy = sc.nextLine();
             arrayMahasiswa15[i].ipk = Float.parseFloat(dummy);
         }
-        System.out.println("____________________________________________________________________________");
 
         System.out.println();
         System.out.println();
-        System.out.println(".............................................................................");
+        System.out.println("............................................................................");
         System.out.println("RINCIAN DAFTAR MAHASISWA 1-3");
 
         for (int i = 0; i < 3; i++) {
 
-            System.out.println(".............................................................................");
+            System.out.println("............................................................................");
             System.out.println("DATA MAHASISWA KE-" + (i + 1));
             System.out.println("NIM     : " + arrayMahasiswa15[i].nim);
             System.out.println("Nama    : " + arrayMahasiswa15[i].nama);
             System.out.println("Kelas   : " + arrayMahasiswa15[i].kelas);
             System.out.println("IPK     : " + arrayMahasiswa15[i].ipk);
         }
-            System.out.println(".............................................................................");
+            System.out.println("............................................................................");
         // arrayMahasiswa15[0] = new Mahasiswa15();
         // arrayMahasiswa15[0].nim = "244107060033";
         // arrayMahasiswa15[0].nama = "AGNES TITANIA KINANTI";
