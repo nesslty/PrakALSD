@@ -1,11 +1,11 @@
 package Praktikum03;
 
 public class DataDosen15 {
-    public static void dataSemuaDosen(Dosen15[] arrayOfDosen) {
+    public void dataSemuaDosen(Dosen15[] arrayDosen15) {
         System.out.println();
         System.out.println("..................................................................................");
         System.out.println("DAFTAR SEMUA DOSEN:");
-        for (Dosen15 dsn : arrayOfDosen) {
+        for (Dosen15 dsn : arrayDosen15) {
             System.out.println("Kode            : " + dsn.kode); 
             System.out.println("Nama            : " + dsn.nama);
             System.out.println("Jenis Kelamin   : " + (dsn.jenisKelamin ? "Pria" : "Wanita"));
@@ -15,7 +15,7 @@ public class DataDosen15 {
         }
     }
 
-    public static void jumlahDosenPerJenisKelamin(Dosen15[] arrayDosen15) {
+    public void jumlahDosenPerJenisKelamin(Dosen15[] arrayDosen15) {
         int pria = 0, wanita = 0;
         for (Dosen15 dsn : arrayDosen15) {
             if (dsn.jenisKelamin) {
@@ -24,6 +24,7 @@ public class DataDosen15 {
                 wanita++;
             }
         }
+        
         System.out.println();
         System.out.println("..................................................................................");
         System.out.println("Jumlah Dosen Pria   : " + pria + " orang");
@@ -31,7 +32,7 @@ public class DataDosen15 {
         System.out.println("..................................................................................");
     }
 
-    public static void rerataUsiaDosenPerJenisKelamin(Dosen15[] arrayDosen15) {
+    public void rerataUsiaDosenPerJenisKelamin(Dosen15[] arrayDosen15) {
         int totalUsiaPria = 0, totalUsiaWanita = 0, jumlahPria = 0, jumlahWanita = 0;
         for (Dosen15 dsn : arrayDosen15) {
             if (dsn.jenisKelamin) {
@@ -48,20 +49,21 @@ public class DataDosen15 {
         System.out.println("..................................................................................");
     }
 
-    public static void infoDosenPalingTua(Dosen15[] arrayDosen15) {
+    public void infoDosenPalingTua(Dosen15[] arrayDosen15) {
             Dosen15 tertua = arrayDosen15[0];
             for (Dosen15 dsn : arrayDosen15) {
                 if (dsn.usia > tertua.usia) {
                     tertua = dsn;
                 }
             }
+            
             System.out.println("DOSEN PALING TUA");
             System.out.println("Nama Dosen: " + tertua.nama);
             System.out.println("Umur dosen: " + tertua.usia + " tahun");
             System.out.println("..................................................................................");
     }
 
-    public static void infoDosenPalingMuda(Dosen15[] arrayDosen15) {
+    public void infoDosenPalingMuda(Dosen15[] arrayDosen15) {
         Dosen15 termuda = arrayDosen15[0];
         for (Dosen15 dsn : arrayDosen15) {
             if (dsn.usia < termuda.usia) {

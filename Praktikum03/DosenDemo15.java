@@ -45,11 +45,13 @@ public class DosenDemo15 {
         System.out.println("..................................................................................");
         System.out.println();
 
-        DataDosen15.dataSemuaDosen(arrayDosen15);
-        DataDosen15.jumlahDosenPerJenisKelamin(arrayDosen15);
-        DataDosen15.rerataUsiaDosenPerJenisKelamin(arrayDosen15);
-        DataDosen15.infoDosenPalingTua(arrayDosen15);
-        DataDosen15.infoDosenPalingMuda(arrayDosen15);
+        DataDosen15 dataDsn = new DataDosen15();
+        dataDsn.dataSemuaDosen(arrayDosen15);
+        dataDsn.jumlahDosenPerJenisKelamin(arrayDosen15);
+        dataDsn.rerataUsiaDosenPerJenisKelamin(arrayDosen15);
+        dataDsn.infoDosenPalingTua(arrayDosen15);
+        dataDsn.infoDosenPalingMuda(arrayDosen15);
+
         sc.close();
     }
 }
