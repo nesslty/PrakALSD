@@ -13,3 +13,4 @@ public class Dosen15 {
         this.usia = usia;
     }
 }
+

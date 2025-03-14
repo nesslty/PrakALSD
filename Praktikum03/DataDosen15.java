@@ -47,6 +47,7 @@ public class DataDosen15 {
         System.out.println("Rata-rata usia dosen Pria   : " + (jumlahPria > 0 ? (totalUsiaPria / jumlahPria) : 0) + " tahun");
         System.out.println("Rata-rata usia dosen Wanita : " + (jumlahWanita > 0 ? (totalUsiaWanita / jumlahWanita) : 0) + " tahun");
         System.out.println("..................................................................................");
+
     }
 
     public void infoDosenPalingTua(Dosen15[] arrayDosen15) {
@@ -61,6 +62,7 @@ public class DataDosen15 {
             System.out.println("Nama Dosen: " + tertua.nama);
             System.out.println("Umur dosen: " + tertua.usia + " tahun");
             System.out.println("..................................................................................");
+            
     }
 
     public void infoDosenPalingMuda(Dosen15[] arrayDosen15) {
