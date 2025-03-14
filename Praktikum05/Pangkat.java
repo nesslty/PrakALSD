@@ -1,4 +1,4 @@
-package Praktikum04;
+package Praktikum05;
 
 public class Pangkat {
     int nilai, pangkat;
