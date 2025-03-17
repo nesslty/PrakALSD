@@ -3,8 +3,10 @@ package Praktikum05;
 public class Faktorial {
     int faktorialIBF(int n) {
         int fakto =1;
-        for(int i=1; i<=n; i++) {
+        int i=1;
+        while(i<=n) {
             fakto = fakto * i;
+            i++;
         }
         return fakto;
     }
