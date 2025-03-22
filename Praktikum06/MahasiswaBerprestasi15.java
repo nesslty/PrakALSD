@@ -1,6 +1,11 @@
 public class MahasiswaBerprestasi15 {
-    Mahasiswa15[] listMhs = new Mahasiswa15[5];
+    Mahasiswa15[] listMhs;
     int idx;
+
+    MahasiswaBerprestasi15(int jumlahMahasiswa) {
+        listMhs = new Mahasiswa15[jumlahMahasiswa];
+        idx = 0;
+    }
 
     void tambah (Mahasiswa15 m) {
         if (idx < listMhs.length) {
@@ -13,8 +18,10 @@ public class MahasiswaBerprestasi15 {
 
     void tampil() {
         for (Mahasiswa15 m : listMhs) {
+            if (m != null) {
             m.tampilkanInformasi();
             System.out.println("-----------------------------");
+            }
         }
     }
 
@@ -48,7 +55,7 @@ public class MahasiswaBerprestasi15 {
         for (int i = 1; i < listMhs.length; i++) {
             Mahasiswa15 temp = listMhs[i];
             int j = i;
-            while (j > 0 && listMhs[j-1].ipk > temp.ipk) {
+            while (j > 0 && listMhs[j-1].ipk < temp.ipk) {
                 listMhs[j] = listMhs[j-1];
                 j--;
             }
