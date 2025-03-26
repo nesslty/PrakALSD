@@ -10,8 +10,8 @@ public class Mahasiswa15 {
     Mahasiswa15 (String nm, String name, String kls, double ip) {
         nim = nm;
         nama = name;
-        ipk = ip;
         kelas = kls;
+        ipk = ip;
     }
 
     void tampilkanInformasi() {

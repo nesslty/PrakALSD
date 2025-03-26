@@ -5,10 +5,13 @@ public class MahasiswaDemo15 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         input.useLocale(Locale.US);
-        int jumMhs = 5;
+
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumMhs = input.nextInt();
+        input.nextLine();
         
         MahasiswaBerprestasi15 list = new MahasiswaBerprestasi15(jumMhs);
-        
+
         for (int i = 0; i < jumMhs; i++) {
             System.out.println("Masukkan data mahasiswa ke-" + (i + 1));
             System.out.print("NIM   : ");
@@ -26,6 +29,8 @@ public class MahasiswaDemo15 {
         }
 
         list.tampil();
+
+        list.bubbleSort();
 
         //melakukan pencarian data binary
         System.out.println("---------------------------------------------------------");
