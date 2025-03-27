@@ -3,7 +3,7 @@ public class DataDosen15 {
     int idx;
 
     DataDosen15() {
-        dataDosen = new Dosen15[10]; // Maksimal 10 data dosen
+        dataDosen = new Dosen15[10]; 
         idx = 0;
     }
 
@@ -38,29 +38,51 @@ public class DataDosen15 {
         }
     }
 
-    void sortingDSC() {
-        for (int i = 0; i < idx - 1; i++) {
-            int maxIdx = i;
-            for (int j = i + 1; j < idx; j++) {
-                if (dataDosen[j].usia > dataDosen[maxIdx].usia) {
-                    maxIdx = j;
-                }
+    void searchNama(String nama) {
+        boolean found = false;
+        int jumlahData = 0;
+        for (int i = 0; i < idx; i++) {
+            if (dataDosen[i].nama.equalsIgnoreCase(nama)) {
+                dataDosen[i].tampil();
+                found = true;
+                jumlahData++;
             }
-            Dosen15 temp = dataDosen[maxIdx];
-            dataDosen[maxIdx] = dataDosen[i];
-            dataDosen[i] = temp;
+        }
+        if (!found) {
+            System.out.println("Data dosen dengan nama " + nama + " tidak ditemukan");
+        } else if (jumlahData > 1) {
+            System.out.println("Peringatan: Ditemukan lebih dari satu dosen dengan nama yang sama!");
         }
     }
 
-    void insertionSort() {
-        for (int i = 1; i < idx; i++) {
-            Dosen15 temp = dataDosen[i];
-            int j = i;
-            while (j > 0 && dataDosen[j - 1].usia < temp.usia) {
-                dataDosen[j] = dataDosen[j - 1];
-                j--;
+    void searchUsia (int usia) {
+        sortingASC();
+        int kiri = 0, kanan = idx - 1;
+        boolean found = false;
+        int jumlahData = 0;
+
+        while (kiri <= kanan) {
+            int tengah = kiri + (kanan - kiri) / 2;
+            if (dataDosen[tengah].usia == usia) {
+                int i = tengah;
+
+                while (i <= kanan && dataDosen[i].usia == usia) {
+                    dataDosen[i].tampil();
+                    i++;
+                    jumlahData++;
+                }
+                found = true;
+                break;
+            } else if (dataDosen[tengah].usia < usia) {
+                kiri = tengah + 1;
+            } else {
+                kanan = tengah - 1;
             }
-            dataDosen[j] = temp;
         }
+        if (!found) {
+            System.out.println("Data dosen dengan usia " + usia + " tidak ditemukan");
+        } else if (jumlahData > 1) {
+            System.out.println("Peringatan: Ditemukan lebih dari satu dosen dengan usia yang sama");
+        } 
     }
 }

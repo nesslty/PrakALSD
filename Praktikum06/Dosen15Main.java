@@ -8,14 +8,13 @@ public class Dosen15Main {
             System.out.println("===== MENU DATA DOSEN =====");
             System.out.println("1. Tambah Data Dosen");
             System.out.println("2. Tampilkan Data Dosen");
-            System.out.println("3. Sorting ASC (Usia Termuda ke Tertua - Bubble Sort)");
-            System.out.println("4. Sorting DSC (Usia Tertua ke Termuda - Selection Sort)");
-            System.out.println("5. Sorting DSC (Usia Tertua ke Termuda - Insertion Sort)");
-            System.out.println("6. Keluar");
+            System.out.println("3. Cari Dosen berdasarkan Nama");
+            System.out.println("4. Cari Dosen berdasarkan Usia");
+            System.out.println("5. Keluar");
             System.out.print("Pilih menu: ");
             int pilihan = input.nextInt();
             input.nextLine();
-            
+        
             switch (pilihan) {
                 case 1:
                     System.out.print("Masukkan kode dosen   : ");
@@ -39,27 +38,18 @@ public class Dosen15Main {
                     break;
 
                 case 3:
-                    System.out.println("Mengurutkan data dosen berdasarkan usia (ASC)...");
-                    dataDosen.sortingASC();
-                    System.out.println("Data berhasil diurutkan!");
-                    dataDosen.tampil();
+                    System.out.println("Masukkan nama dosen yang dicari: ");
+                    String cariNama = input.nextLine();
+                    dataDosen.searchNama(cariNama);
                     break;
 
                 case 4:
-                    System.out.println("Mengurutkan data dosen berdasarkan usia (DSC - Selection Sort)...");
-                    dataDosen.sortingDSC();
-                    System.out.println("Data berhasil diurutkan!");
-                    dataDosen.tampil();
-                    break;
-
-                case 5:
-                    System.out.println("Mengurutkan data dosen berdasarkan usia (DSC - Insertion Sort)...");
-                    dataDosen.insertionSort();
-                    System.out.println("Data berhasil diurutkan!");
-                    dataDosen.tampil();
+                    System.out.println("Masukkan usia dosen yang dicari: ");
+                    int cariUsia = input.nextInt();
+                    dataDosen.searchUsia(cariUsia);
                     break;
                 
-                case 6:
+                case 5:
                     System.out.println("Terima kasih! Program selesai.");
                     input.close();
                     return;

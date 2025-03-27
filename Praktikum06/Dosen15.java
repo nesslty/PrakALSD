@@ -20,4 +20,3 @@ public class Dosen15 {
         System.out.println("--------------------------");
     }
 }
-
