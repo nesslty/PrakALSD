@@ -39,6 +39,7 @@ public class StackTugasMahasiswa15 {
     public Mahasiswa15 pop() {
         if (!isEmpty()) {
             Mahasiswa15 m = stack[top];
+            stack[top] = null;
             top--;
             return m;
         } else {
@@ -57,9 +58,21 @@ public class StackTugasMahasiswa15 {
     }
 
     public void print() {
-        for (int i = 0; i <= top; i++) {
+        for (int i = top; i >= 0; i--) {
             System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
         }
         System.out.println("");
+    }
+
+    public void lihatTugasTerbawah() {
+        if (!isEmpty()) {
+            System.out.println("Tugas pertama dikumpulkan oleh " + stack[0].nama);
+        } else {
+            System.out.println("Stack kosong! Tidak ada tugas.");
+        }
+    }
+
+    public int jumlahTugas() {
+        return top + 1;
     }
 }
