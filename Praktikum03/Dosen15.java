@@ -3,7 +3,7 @@ package Praktikum03;
 public class Dosen15 {
     public String kode;
     public String nama;
-    public boolean jenisKelamin;
+    publicboolean jenisKelamin;
     public int usia;
 
     public Dosen15 (String kode, String nama, boolean jenisKelamin, int usia) {
