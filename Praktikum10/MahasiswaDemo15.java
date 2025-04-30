@@ -19,11 +19,11 @@ public class MahasiswaDemo15 {
             scan.nextLine();
             switch (pilih) {
                 case 1:
-                    System.out.print("Nama: ");
+                    System.out.print("Nama  : ");
                     String nama = scan.nextLine();
-                    System.out.print("NIM: ");
+                    System.out.print("NIM   : ");
                     String nim = scan.nextLine();
-                    System.out.print("Kelas: "); 
+                    System.out.print("Kelas : "); 
                     String kelas = scan.nextLine();
                     Mahasiswa15 mhs = new Mahasiswa15(nama, nim, kelas);
                     stack.push(mhs);
