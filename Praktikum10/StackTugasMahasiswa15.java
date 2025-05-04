@@ -76,12 +76,12 @@ public class StackTugasMahasiswa15 {
         return top + 1;
     }
 
-    public String konversiDesimalKeBiner(int nilai) {
+    public String konversiDesimalKeBiner(int kode) {
         StackKonversi15 stack = new StackKonversi15();
-        while (nilai > 0) {
-            int sisa = nilai % 2;
+        while (kode != 0) {
+            int sisa = kode % 2;
             stack.push(sisa);
-            nilai = nilai / 2;
+            kode = kode / 2;
         }
         String biner = new String();
         while (!stack.isEmpty()) {
