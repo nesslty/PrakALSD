@@ -17,10 +17,10 @@ public class SuratDemo15 {
             System.out.println("0. Keluar");
             System.out.print("Pilih: ");
             pilih = scan.nextInt();
-            scan.nextLine(); 
+            scan.nextLine();
 
             switch (pilih) {
-                case 1 -> {
+                case 1:
                     System.out.print("ID Surat: ");
                     String id = scan.nextLine();
                     System.out.print("Nama Mahasiswa: ");
@@ -33,16 +33,28 @@ public class SuratDemo15 {
                     int durasi = scan.nextInt();
                     scan.nextLine();
                     stackSurat.terimaSurat(id, nama, kelas, jenis, durasi);
-                }
-                case 2 -> stackSurat.prosesSurat();
-                case 3 -> stackSurat.lihatSuratTerakhir();
-                case 4 -> {
+                    break;
+
+                case 2:
+                    stackSurat.prosesSurat();
+                    break;
+
+                case 3:
+                    stackSurat.lihatSuratTerakhir();
+                    break;
+
+                case 4:
                     System.out.print("Masukkan nama mahasiswa: ");
                     String namaCari = scan.nextLine();
                     stackSurat.cariSurat(namaCari);
-                }
-                case 0 -> System.out.println("Program selesai. Terima kasih!");
-                default -> System.out.println("Pilihan tidak valid!");
+                    break;
+
+                case 0:
+                    System.out.println("Program selesai. Terima kasih!");
+                    break;
+
+                default:
+                    System.out.println("Pilihan tidak valid!");
             }
 
         } while (pilih != 0);
