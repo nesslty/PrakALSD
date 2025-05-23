@@ -112,7 +112,7 @@ public class SingleLinkedList15 {
 
     public void removeLast() {
         if (isEmpty()) {
-            System.out.println("LInked List masih kosong, tidak dapat dihapus");
+            System.out.println("Linked List masih kosong, tidak dapat dihapus");
         } else if (head == tail) {
             head = tail = null;
         } else {
