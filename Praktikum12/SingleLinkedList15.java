@@ -1,4 +1,4 @@
-package Pralktikum12;
+package Praktikum12;
 
 public class SingleLinkedList15 {
     Node15 head;

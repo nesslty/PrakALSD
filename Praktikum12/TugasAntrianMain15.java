@@ -1,4 +1,4 @@
-package Pralktikum12;
+package Praktikum12;
 import java.util.Scanner;
 
 public class TugasAntrianMain15 {
@@ -44,6 +44,7 @@ public class TugasAntrianMain15 {
 
                 case 6:
                     System.out.println("Jumlah mahasiswa yang masih antri: ");
+                    antrian.jumlahMahasiswa();
 
                 case 7:
                     antrian.clear();

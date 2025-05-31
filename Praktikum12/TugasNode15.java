@@ -1,4 +1,4 @@
-package Pralktikum12;
+package Praktikum12;
 
 public class TugasNode15 {
     TugasMahasiswa15 data;

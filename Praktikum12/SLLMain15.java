@@ -1,4 +1,4 @@
-package Pralktikum12;
+package Praktikum12;
 
 public class SLLMain15 {
     public static void main(String[] args) {
