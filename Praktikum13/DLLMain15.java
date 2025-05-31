@@ -1,6 +1,18 @@
 package Praktikum13;
 import java.util.Scanner;
 public class DLLMain15 {
+    public static Mahasiswa15 inputMahasiswa(Scanner scan) {
+    scan.nextLine(); // buang newline
+    System.out.print("Masukkan NIM      : ");
+    String nim = scan.nextLine();
+    System.out.print("Masukkan Nama     : ");
+    String nama = scan.nextLine();
+    System.out.print("Masukkan Kelas    : ");
+    String kelas = scan.nextLine();
+    System.out.print("Masukkan IPK      : ");
+    double ipk = scan.nextDouble();
+    return new Mahasiswa15(nim, nama, kelas, ipk);
+    }
     public static void main (String[] args) {
         DoubleLinkedList15 list = new DoubleLinkedList15();
         Scanner scan = new Scanner (System.in);
@@ -15,6 +27,7 @@ public class DLLMain15 {
             System.out.println("4. Hapus di akhir");
             System.out.println("5. Tampilkan data");
             System.out.println("6. Cari mahasiswa berdasarkan NIM");
+            System.out.println("7. Tambah setelah NIM tertentu");
             System.out.println("0. Keluar");
             System.out.println("Pilihan Menu");
             pilihan = scan.nextInt();
@@ -42,6 +55,13 @@ public class DLLMain15 {
                     } else {
                         System.out.println("Data tidak ditemukan.");
                     }
+                }
+                case 7 -> {
+                scan.nextLine();
+                System.out.print("Masukkan NIM yang akan disisipi setelahnya: ");
+                String keyNim = scan.nextLine();
+                Mahasiswa15 mhs = inputMahasiswa(scan);
+                list.inserAfter(keyNim, mhs);
                 }
                 case 0 -> System.out.println("keluar dari program");
                 default -> System.out.println("pilihan tidak falid");
