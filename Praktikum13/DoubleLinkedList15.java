@@ -160,17 +160,17 @@ public class DoubleLinkedList15 {
             return;
         }
 
-        Node15 toDelete = current.next;
-        if (toDelete == tail) {
+        Node15 delete = current.next;
+        if (delete == tail) {
             tail = current;
             current.next = null;
         } else {
-            current.next = toDelete.next;
-            toDelete.next.prev = current;
+            current.next = delete.next;
+            delete.next.prev = current;
         }
         size--;
         System.out.println("Node setelah NIM " + keyNim + " berhasil dihapus:");
-        toDelete.data.tampil();
+        delete.data.tampil();
     }
 
     public void remove(int index) {
